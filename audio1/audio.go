@@ -228,7 +228,8 @@ func startPulseaudio(count int) error {
 			time.Sleep(500 * time.Millisecond)
 			return startPulseaudio(count - 1)
 		}
-		return errors.New("failed to start pulseaudio")
+		return nil
+		//return errors.New("failed to start pulseaudio")
 	}
 
 	return nil
